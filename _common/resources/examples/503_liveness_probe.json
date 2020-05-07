@@ -1,0 +1,16 @@
+{
+  "service": "petstore-service",
+  "code": "ERROR",
+  "message": "Redis",
+  "dependencies": [
+    {
+      "service": "Redis",
+      "code": "ERROR",
+      "message": "Redis connection to 127.0.0.1:6379 failed - CONNECTION TIMEOUT"
+    },
+    {
+      "service": "Postgres",
+      "code": "OK"
+    }
+  ]
+}

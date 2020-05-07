@@ -1,0 +1,27 @@
+openapi: "3.0.0"
+info:
+  version: 'v1.0'
+  title: Swagger Petstore
+  license:
+    name: MIT
+
+servers:
+  - url: http://petstore.swagger.io
+  - url: http://localhost
+
+paths:
+  /ready:
+    $ref: '_common/resources/readiness.yml'
+  /live:
+    $ref: '_common/resources/liveness.yml'
+  /version:
+    $ref: '_common/resources/version.yml'
+  /v1/pets:
+    $ref: 'resources/pets.yml'
+  /v1/pets/{petId}:
+    $ref: 'resources/pet.yml'
+
+components:
+  securitySchemes:
+    JWT:
+      $ref: '_common/security/JWT.yml'

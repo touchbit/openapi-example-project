@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "common-component/schemas/dto/version.json",
+  "title": "version",
+  "description": "Service version DTO",
+  "type": "object",
+  "required": ["name", "version", "revision"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Service name"
+    },
+    "version": {
+      "type": "string",
+      "description": "Service version"
+    },
+    "revision": {
+      "type": "string",
+      "description": "Service revision"
+    },
+    "contracts": {
+      "type": "array",
+      "minItems": 0,
+      "uniqueItems": true,
+      "description": "Dependent service API contracts (optional)",
+      "items": {
+        "type": "object",
+        "required": ["version", "name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Service contract name"
+          },
+          "version": {
+            "type": "string",
+            "description": "Service contract version"
+          },
+          "revision": {
+            "type": "string",
+            "description": "Service contract revision (optional)"
+          }
+        }
+      }
+    }
+  }
+}

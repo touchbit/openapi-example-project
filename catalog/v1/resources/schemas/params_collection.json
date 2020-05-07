@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "petstore/v1/resources/schemas/collections_dto.json",
+  "title": "collections_dto",
+  "description": "TODO",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "TODO",
+      "enum": ["collection"]
+    },
+    "id": {
+      "type": "integer",
+      "description": "TODO",
+      "minimum": 1,
+      "multipleOf": 1
+    }
+  },
+  "required": [
+    "type", "id"
+  ]
+}

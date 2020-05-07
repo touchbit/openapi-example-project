@@ -1,0 +1,19 @@
+{
+  "sections": [
+    {
+      "caption": "string",
+      "items": [
+        {
+          "title": "string",
+          "target": "collections",
+          "params": [
+            {
+              "id": 1,
+              "type": "collection"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

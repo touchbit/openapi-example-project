@@ -1,0 +1,17 @@
+{
+  "name": "petstore-service",
+  "version": "v1.33.1",
+  "revision": "556cafd4",
+  "contracts": [
+    {
+      "name": "identity-service",
+      "version": "v1.14.0",
+      "revision": "683ee43d"
+    },
+    {
+      "name": "kyc-service",
+      "version": "v1.2.14",
+      "revision": "daff43d4"
+    }
+  ]
+}

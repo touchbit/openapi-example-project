@@ -1,0 +1,15 @@
+get:
+  summary: Service version probe
+  description: |
+    Uniquely identify the version of the service and the version of contracts with which the service works.
+  operationId: getServicseVersionInfo
+  tags: [ 'probes' ]
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/version_probe.json"
+          example:
+            $ref: "examples/version.json"

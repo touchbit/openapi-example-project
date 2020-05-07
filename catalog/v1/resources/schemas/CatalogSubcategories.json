@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "petstore/v1/resources/schemas/CatalogSubcategories.json",
+  "title": "CatalogSubcategories",
+  "description": "TODO",
+  "type": "object",
+  "properties": {
+    "sections": {
+      "type": "array",
+      "description": "TODO",
+      "minItems": 0,
+      "maxItems": 1000,
+      "uniqueItems": false,
+      "items": {
+        "$ref": "section.json"
+      }
+    }
+  },
+  "required": [
+    "sections"
+  ]
+}

@@ -1,0 +1,50 @@
+openapi: "3.0.0"
+info:
+  version: 'v1.4.22'
+  title: Swagger Catalog
+  license:
+    name: MIT
+
+paths:
+  /catalog/v1/subcategories:
+    post:
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: 'resources/schemas/CatalogSubcategories.json'
+              examples:
+                Collections: { value: { $ref: 'resources/examples/CatalogSubcategoriesCollections200.json' } }
+                Items: { value: { $ref: 'resources/examples/CatalogSubcategoriesItems200.json' } }
+
+
+  /catalog/v1/collections:
+    post:
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              description: 'TODO'
+              minItems: 1
+              uniqueItems: true
+              items:
+                $ref: 'resources/schemas/params_collection.json'
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: 'resources/schemas/CatalogSubcategories.json'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: token

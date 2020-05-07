@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "catalog/v1/resources/schemas/section.json",
+  "title": "section",
+  "type": "object",
+  "description": "TODO",
+  "properties": {
+    "caption": {
+      "type": "string",
+      "description": "TODO"
+    },
+    "items": {
+      "type": "array",
+      "description": "TODO",
+      "minItems": 0,
+      "maxItems": 1000,
+      "uniqueItems": false,
+      "items": {
+        "$ref": "section_item.json"
+      }
+    }
+  },
+  "required": [
+    "caption"
+  ]
+}

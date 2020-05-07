@@ -1,0 +1,28 @@
+{
+  "sections": [
+    {
+      "caption": "string",
+      "items": [
+        {
+          "title": "string",
+          "target": "collections",
+          "params": [
+            {
+              "id": 1,
+              "type": "attribute",
+              "value": "100"
+            },
+            {
+              "id": 20,
+              "type": "category"
+            },
+            {
+              "id": 33,
+              "type": "subcategory"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "service": "petstore-service",
+  "status": "OK",
+  "dependencies": [
+    {
+      "service": "Redis",
+      "status": "OK"
+    },
+    {
+      "service": "Postgres",
+      "status": "OK"
+    }
+  ]
+}

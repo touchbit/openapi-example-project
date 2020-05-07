@@ -1,0 +1,30 @@
+get:
+  summary: Service liveness probe
+  description: |
+    The probe is used to monitor the operation of a microservice for its readiness to accept the load.
+    [Learn more about liveness probe.](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-command)
+  operationId: getServicseLivenessProbe
+  tags: [ 'probes' ]
+  responses:
+    '200':
+      description: Service works as normal mode
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/version_probe.json"
+          example:
+            $ref: "examples/200_liveness_probe.json"
+    '503':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/version_probe.json"
+          example:
+            $ref: "examples/503_liveness_probe.json"
+    '500':
+      description: Unexpected probe error
+      content:
+        text/plain:
+          example:
+            'Unexpected probe error'

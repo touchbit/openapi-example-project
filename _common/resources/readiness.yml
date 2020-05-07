@@ -1,0 +1,18 @@
+get:
+  summary: Service readiness probe
+  description: |
+    Probe for checking the startup microservice for readiness to accept the incoming load.
+    [Learn more about readiness probe.](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes)
+  operationId: getServicseReadinessProbe
+  tags: [ 'probes' ]
+  responses:
+    '200':
+      description: The service has been successfully launched, it is operating normally and is ready to accept requests.
+    '503':
+      description: The service is in the process of starting and is not ready to accept the incoming load.
+    '500':
+      description: Unexpected probe error
+      content:
+        text/plain:
+          example:
+            'Unexpected probe error'

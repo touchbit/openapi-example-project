@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "catalog/v1/resources/schemas/section_item.json",
+  "title": "section_item",
+  "type": "object",
+  "description": "TODO",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "TODO"
+    },
+    "target": {
+      "type": "string",
+      "description": "TODO",
+      "enum": [
+        "collections",
+        "items"
+      ]
+    },
+    "params": {
+      "type": "array",
+      "description": "TODO",
+      "minItems": 0,
+      "maxItems": 1000,
+      "uniqueItems": false,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "params_collection.json"
+          },
+          {
+            "$ref": "params_item.json"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

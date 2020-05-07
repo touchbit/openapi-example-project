@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "_common/resources/schemas/liveness_probe.json",
+  "title": "Liveness probe",
+  "description": "Liveness probe DTO",
+  "type": "object",
+  "required": [ "service", "status", "dependencies" ],
+  "properties": {
+    "service": {
+      "type": "string",
+      "description": "Service name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "ERROR"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "dependencies": {
+      "type": "array",
+      "minItem": 0,
+      "items": {
+        "type": "object",
+        "required": [
+          "service",
+          "status"
+        ],
+        "properties": {
+          "service": {
+            "type": "string",
+            "description": "Service name"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "OK",
+              "ERROR"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
